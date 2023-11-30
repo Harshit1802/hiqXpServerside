@@ -34,7 +34,8 @@ class App {
         this.app.use(express.urlencoded({ limit: '10mb', extended: true, parameterLimit: 50000 }));
         this.app.use(cookieParser());
         this.app.use(compression());
-        this.app.use(cors());//app.use(cors({ origin: corsUrl, optionsSuccessStatus: 200 }));
+        this.app.use(cors({ origin: "https://hiqxp-clientside.onrender.com", optionsSuccessStatus: 200 }));
+        // this.app.use(cors());//app.use(cors({ origin: corsUrl, optionsSuccessStatus: 200 }));
         this.app.use(helmet());
         
     }
